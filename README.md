@@ -32,9 +32,9 @@ just like the example below
 
 Other parameters
 
-`Epson:` this parameter is the tolerated error among the iterations. Default value: 0.01
+`Epson:` this parameter is the tolerated error among the iterations and also the stopping criteria. Default value: 0.01
 
-the output is the final policy and the time that the algorithm took to converge.
+the output is the final policy, the time that the algorithm took to converge, and the number of iterations.
 
 
 ```
