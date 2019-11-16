@@ -1,8 +1,9 @@
 # Probabilistic Planning - Value iteration
-this repository contains a value iteration algorithm along with a parser for a custom  file txt
+this repository contains a value iteration algorithm along with a parser for a custom txt file
 
 
 ## Parser
+this is a parser for a custom txt file. Therefore It is not a regular format
 
 the parser extracts all the states with their available actions with their respective costs and probabilities
 
