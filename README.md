@@ -22,7 +22,7 @@ Value iteration is a method of computing an optimal MDP policy.
 
 The input is the parsed states acquired from the parsing process.
 
-To execute the algorithm you need to import mdp from parser_mdp and then pass the states in the construct and call the `value_iteration()`
+To execute the algorithm you need to import `mdp` from `parser_mdp` and then pass the states in the construct and call the `value_iteration()`
 just like the example below
 
 ```
