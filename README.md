@@ -4,7 +4,7 @@ this repository contains a value iteration algorithm along with a parser for a c
 
 ## Parser
 
-the parser extracts all the states with their available actions and their respective costs
+the parser extracts all the states with their available actions with their respective costs and probabilities
 
 To parser one of those `.net` files, you need to import the `Parser`  from `parser_mdp` just like the example below
 ```
