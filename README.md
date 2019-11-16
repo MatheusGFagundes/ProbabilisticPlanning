@@ -1,6 +1,8 @@
 # Probabilistic Planning - Value iteration
 this repository contains a value iteration algorithm along with a parser for a custom txt file
 
+the solution is solely in python
+
 
 ## Parser
 this is a parser for a custom txt file. Therefore It is not a regular format
