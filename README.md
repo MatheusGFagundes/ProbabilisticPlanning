@@ -12,10 +12,10 @@ the parser extracts all the states with their available actions with their respe
 To parser one of those `.net` files, you need to import the `Parser`  from `parser_mdp` just like the example below
 ```
 from parser_mdp import Parser
-    f = open("RandomGoalState/navigation_10.net")
-    file_txt = f.read()
-    parser = Parser(file_txt)
-    states = parser.get_states()
+f = open("RandomGoalState/navigation_10.net")
+file_txt = f.read()
+parser = Parser(file_txt)
+states = parser.get_states()
 ```
 
 
