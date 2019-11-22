@@ -1,17 +1,14 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 16 17:45:10 2019
-
-@author: mgmat
-"""
-
-from parser_mdp import Parser
 from mdp import Mdp
-from functools import reduce
-f = open("RandomGoalState/navigation_10.net")
-file_txt = f.read()
-parser = Parser(file_txt)
-states = parser.get_states()
+from parser_mdp import Parser
+
+navigationFile = open("RandomGoalState/navigation_10.net")
+
+navigationFileReaded = navigationFile.read()
+
+navigationFileParsed = Parser(navigationFileReaded)
+
+states = navigationFileParsed.get_states()
 
 Mdp(states).value_iteration()
 
+Mdp(states).laoStar()
