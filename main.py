@@ -1,7 +1,7 @@
 from mdp import Mdp
 from parser_mdp import Parser
 
-navigationFile = open("RandomGoalState/navigation_10.net")
+navigationFile = open("RandomGoalState/navigation_1.net")
 
 navigationFileReaded = navigationFile.read()
 
@@ -11,4 +11,4 @@ states = navigationFileParsed.get_states()
 
 Mdp(states).value_iteration()
 
-Mdp(states).laoStar()
+exit(0)
