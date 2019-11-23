@@ -5,8 +5,7 @@ class Mdp:
     def __init__(self, states):
         self.states = states
 
-    def value_iteration(self):
-        epsilon = 0.001
+    def value_iteration(self, epsilon=0.01):
         start_time = time.time()
         min_residual = 1000000000000000
         count = 0
@@ -25,16 +24,10 @@ class Mdp:
             except:
                 print(state.name, "goal_state", 0)
 
-
-
-    def laoStar(self):
-        epsilon = 0.001
+    def laoStar(self, epsilon=0.01):
         start_time = time.time()
         min_residual = 1000000000000000
         count = 0
-        while min_residual > epsilon:
-
-
 
 # - O grafo G' inicialmente consiste no estado inicial s
 #
