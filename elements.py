@@ -19,11 +19,14 @@ class Action:
 class State:
     def __init__(self, name, is_inital, is_goal):
         self.name = name
+        self.x = int(self.name.split("x")[1].split("y")[0])
+        self.y = int(self.name.split("y")[1])
         self.is_inital = is_inital
         self.is_goal = is_goal
         self.actions = []
-        self.chosen_action = None
+        self.chosen_action = ""
         self.value = 0
+        self.predecessors = []
 
     def add_action(self, action):
         self.actions.append(action)
