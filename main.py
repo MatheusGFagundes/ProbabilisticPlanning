@@ -1,18 +1,22 @@
 from mdp import Mdp
 from parser_mdp import Parser
+import glob
 
-navigationFile = open("DeterministicGoalState/navigation_10.net")
+files = glob.glob('DeterministicGoalState/*') + glob.glob('RandomGoalState/*')
 
-navigationFileReaded = navigationFile.read()
+for file in files[11:12]:
+    navigationFile = open(file)
 
-navigationFileParsed = Parser(navigationFileReaded)
+    navigationFileReaded = navigationFile.read()
 
-states = navigationFileParsed.get_states()
+    navigationFileParsed = Parser(navigationFileReaded)
 
-policy_lao, time_lao = Mdp(states).lao_star()
+    states = navigationFileParsed.get_states()
 
-policy_iteration, time_iteration = Mdp(states).value_iteration()
+    policy_lao, time_lao = Mdp(states).lao_star()
 
-
-print(time_lao)
-print(time_iteration)
+    print("LAO, " + file.split('\\')[0]+', '+ file.split('\\')[1] +", "+ str(round(time_lao,2)))
+    
+    policy_iteration, time_iteration = Mdp(states).value_iteration()
+    
+    print("ITER, " + file.split('\\')[0]+', '+ file.split('\\')[1] +", "+str(round(time_iteration,2)))
